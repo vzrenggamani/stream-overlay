@@ -1,82 +1,31 @@
-import Head from 'next/head'
+import { STREAM_CONFIG } from '../data/stream_config';
 
-export default function Home() {
+export default function streamcover() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
+    <div className="bg-white h-screen">
+      <div className="container mx-auto pt-52 flex flex-row items-start gap-80">
+        <div id="stream-description" className="flex flex-col gap-32">
+          <div id="page-title" className="flex flex-col gap-8">
+            <p className="text-5xl text-gray-500 font-mono">
+              vzrenggamani/{STREAM_CONFIG.streamtype}
             </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            <h1 className="font-bold text-8xl text-gray-800 max-w-prose h-80">
+              {STREAM_CONFIG.title}
+            </h1>
+          </div>
+          <div id="video-presenter" className="flex flex-row gap-8">
+            <p className="text-4xl font-bold text-gray-700">{STREAM_CONFIG.presenter}</p>
+            <p className="text-4xl"> | </p>
+            <p className="text-4xl text-gray-600">{STREAM_CONFIG.date}</p>
+          </div>
         </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
+        <img src="/logo-blue.svg" />
+      </div>
+      <div className="absolute inset-x-0 bottom-0 flex">
+        <div className="bg-blue-600 h-12 flex-1"></div>
+        <div className="bg-yellow-400 h-12 flex-1"></div>
+        <div className="bg-red-500 h-12 flex-1"></div>
+      </div>
     </div>
-  )
+  );
 }
