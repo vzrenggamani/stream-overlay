@@ -1,6 +1,6 @@
 export const STREAM_CONFIG = {
-  title: "Stream Overlay is Best Overlay Sistem",
-  presenter: "vzrenggamani",
-  date: "20 Agustus 2021",
+  title: "UntukKita.id: Informasi Vaksinasi Sidoarjo dan Fasilitas Kesehatan",
+  presenter: "vzrenggamani ",
+  date: "12 Agustus 2021",
   streamtype: "kode-stream",
 };
